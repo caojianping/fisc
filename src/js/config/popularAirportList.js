@@ -1,0 +1,313 @@
+export default [{
+    "airportCode": "PEK",
+    "airportName": "北京首都",
+    "countryName": "中国",
+    "airportPy": "beijingshoudu",
+    "airportPyShort": "bjsd",
+    "airportEnName": "Beijing Capital International",
+    "more": 0
+}, {
+    "airportCode": "CAN",
+    "airportName": "广州白云",
+    "countryName": "中国",
+    "airportPy": "guangzhoubaiyun",
+    "airportPyShort": "gzby",
+    "airportEnName": "GuangZhou",
+    "more": 0
+}, {
+    "airportCode": "PVG",
+    "airportName": "上海浦东",
+    "countryName": "中国",
+    "airportPy": "shanghaipudong",
+    "airportPyShort": "shpd",
+    "airportEnName": "ShangHaipudong",
+    "more": 0
+}, {
+    "airportCode": "SHA",
+    "airportName": "上海虹桥",
+    "countryName": "中国",
+    "airportPy": "shanghaihongqiao",
+    "airportPyShort": "shhq",
+    "airportEnName": "ShangHai",
+    "more": 0
+}, {
+    "airportCode": "CTU",
+    "airportName": "成都双流",
+    "countryName": "中国",
+    "airportPy": "chengdushuangliu",
+    "airportPyShort": "cdsl",
+    "airportEnName": "ChengDu",
+    "more": 0
+}, {
+    "airportCode": "SZX",
+    "airportName": "深圳宝安",
+    "countryName": "中国",
+    "airportPy": "shenzhenbaoan",
+    "airportPyShort": "szba",
+    "airportEnName": "ShenZhen",
+    "more": 0
+}, {
+    "airportCode": "KMG",
+    "airportName": "昆明长水",
+    "countryName": "中国",
+    "airportPy": "kunmingchangshui",
+    "airportPyShort": "kmcs",
+    "airportEnName": "KunMing ChangShui",
+    "more": 0
+}, {
+    "airportCode": "XIY",
+    "airportName": "西安咸阳",
+    "countryName": "中国",
+    "airportPy": "xianxianyang",
+    "airportPyShort": "xaxy",
+    "airportEnName": "XiAn",
+    "more": 0
+}, {
+    "airportCode": "CKG",
+    "airportName": "重庆江北",
+    "countryName": "中国",
+    "airportPy": "chongqingjiangbei",
+    "airportPyShort": "cqjb",
+    "airportEnName": "ChongQing",
+    "more": 0
+}, {
+    "airportCode": "HGH",
+    "airportName": "杭州萧山",
+    "countryName": "中国",
+    "airportPy": "hangzhouxiaoshan",
+    "airportPyShort": "hzxs",
+    "airportEnName": "HangZhou",
+    "more": 0
+}, {
+    "airportCode": "MFM",
+    "airportName": "澳门",
+    "countryName": "中国澳门",
+    "airportPy": "aomen",
+    "airportPyShort": "am",
+    "airportEnName": "Macau",
+    "more": 0
+}, {
+    "airportCode": "CDG",
+    "airportName": "巴黎戴高乐",
+    "countryName": "法国",
+    "airportPy": "balidaigaole",
+    "airportPyShort": "bldgl",
+    "airportEnName": "Paris",
+    "more": 0
+}, {
+    "airportCode": "KIX",
+    "airportName": "大阪关西",
+    "countryName": "日本",
+    "airportPy": "dabanguanxi",
+    "airportPyShort": "dbgx",
+    "airportEnName": "Osaka",
+    "more": 0
+}, {
+    "airportCode": "DXB",
+    "airportName": "迪拜",
+    "countryName": "阿拉伯联合酋长国",
+    "airportPy": "dibai",
+    "airportPyShort": "db",
+    "airportEnName": "DUBAI",
+    "more": 0
+}, {
+    "airportCode": "NRT",
+    "airportName": "东京成田",
+    "countryName": "日本",
+    "airportPy": "dongjingchengtian",
+    "airportPyShort": "djct",
+    "airportEnName": "Tokyo",
+    "more": 0
+}, {
+    "airportCode": "HND",
+    "airportName": "东京羽田",
+    "countryName": "日本",
+    "airportPy": "dongjingyutian",
+    "airportPyShort": "djyt",
+    "airportEnName": "Tokyo",
+    "more": 0
+}, {
+    "airportCode": "YYZ",
+    "airportName": "多伦多皮尔逊",
+    "countryName": "加拿大",
+    "airportPy": "duolunduopierxun",
+    "airportPyShort": "dldpex",
+    "airportEnName": "Toronto",
+    "more": 0
+}, {
+    "airportCode": "FRA",
+    "airportName": "法兰克福",
+    "countryName": "德国",
+    "airportPy": "falankefu",
+    "airportPyShort": "flkf",
+    "airportEnName": "Frankfurt",
+    "more": 0
+}, {
+    "airportCode": "AMS",
+    "airportName": "荷兰阿姆斯特丹斯史基浦(西霍普)",
+    "countryName": "荷兰",
+    "airportPy": "helanamusitedansishijipu xihuopu ",
+    "airportPyShort": "hlamstdssjp xhp ",
+    "airportEnName": "Amsterdam",
+    "more": 0
+}, {
+    "airportCode": "KUL",
+    "airportName": "吉隆坡",
+    "countryName": "马来西亚",
+    "airportPy": "jilongpo",
+    "airportPyShort": "jlp",
+    "airportEnName": "Kuala Lumpur",
+    "more": 0
+}, {
+    "airportCode": "SFO",
+    "airportName": "旧金山",
+    "countryName": "美国",
+    "airportPy": "jiujinshan",
+    "airportPyShort": "jjs",
+    "airportEnName": "San Francisco",
+    "more": 0
+}, {
+    "airportCode": "CJU",
+    "airportName": "济州岛济州",
+    "countryName": "韩国",
+    "airportPy": "jizhoudaojizhou",
+    "airportPyShort": "jzdjz",
+    "airportEnName": "Jeju",
+    "more": 0
+}, {
+    "airportCode": "LHR",
+    "airportName": "伦敦希思罗",
+    "countryName": "英国",
+    "airportPy": "lundunxisiluo",
+    "airportPyShort": "ldxsl",
+    "airportEnName": "London",
+    "more": 0
+}, {
+    "airportCode": "LAX",
+    "airportName": "洛杉矶",
+    "countryName": "美国",
+    "airportPy": "luoshanji",
+    "airportPyShort": "lsj",
+    "airportEnName": "Los Angeles",
+    "more": 0
+}, {
+    "airportCode": "BKK",
+    "airportName": "曼谷(素万那普)",
+    "countryName": "泰国",
+    "airportPy": "mangu suwannapu ",
+    "airportPyShort": "mg swnp ",
+    "airportEnName": "Bangkok",
+    "more": 0
+}, {
+    "airportCode": "MNL",
+    "airportName": "马尼拉",
+    "countryName": "菲律宾",
+    "airportPy": "manila",
+    "airportPyShort": "mnl",
+    "airportEnName": "Manila",
+    "more": 0
+}, {
+    "airportCode": "MEL",
+    "airportName": "墨尔本",
+    "countryName": "澳大利亚",
+    "airportPy": "moerben",
+    "airportPyShort": "meb",
+    "airportEnName": "Melbourne",
+    "more": 0
+}, {
+    "airportCode": "JFK",
+    "airportName": "纽约肯尼迪",
+    "countryName": "美国",
+    "airportPy": "niuyuekennidi",
+    "airportPyShort": "nyknd",
+    "airportEnName": "John F. Kennedy",
+    "more": 0
+}, {
+    "airportCode": "HKT",
+    "airportName": "普吉岛普吉",
+    "countryName": "泰国",
+    "airportPy": "pujidaopuji",
+    "airportPyShort": "pjdpj",
+    "airportEnName": "Phuket Island",
+    "more": 0
+}, {
+    "airportCode": "ICN",
+    "airportName": "首尔仁川",
+    "countryName": "韩国",
+    "airportPy": "shouerrenchuan",
+    "airportPyShort": "serc",
+    "airportEnName": "Incheon International Airport",
+    "more": 0
+}, {
+    "airportCode": "TSA",
+    "airportName": "台北松山",
+    "countryName": "中国台湾",
+    "airportPy": "taibeisongshan",
+    "airportPyShort": "tbss",
+    "airportEnName": "TaiBei",
+    "more": 0
+}, {
+    "airportCode": "TPE",
+    "airportName": "台北桃园",
+    "countryName": "中国台湾",
+    "airportPy": "taibeitaoyuan",
+    "airportPyShort": "tbty",
+    "airportEnName": "Taoyuan",
+    "more": 0
+}, {
+    "airportCode": "YVR",
+    "airportName": "温哥华",
+    "countryName": "加拿大",
+    "airportPy": "wengehua",
+    "airportPyShort": "wgh",
+    "airportEnName": "Vancouver",
+    "more": 0
+}, {
+    "airportCode": "HKG",
+    "airportName": "香港赤鱲角",
+    "countryName": "中国香港",
+    "airportPy": "xianggangchiliejiao",
+    "airportPyShort": "xgclj",
+    "airportEnName": "Hong Kong",
+    "more": 0
+}, {
+    "airportCode": "SYD",
+    "airportName": "悉尼金斯福德·史密斯",
+    "countryName": "澳大利亚",
+    "airportPy": "xinijinsifude shimisi",
+    "airportPyShort": "xnjsfd sms",
+    "airportEnName": "Sydney",
+    "more": 0
+}, {
+    "airportCode": "SIN",
+    "airportName": "新加坡樟宜",
+    "countryName": "新加坡",
+    "airportPy": "xinjiapozhangyi",
+    "airportPyShort": "xjpzy",
+    "airportEnName": "Singapore",
+    "more": 0
+}, {
+    "airportCode": "SEA",
+    "airportName": "西雅图塔科马",
+    "countryName": "美国",
+    "airportPy": "xiyatutakema",
+    "airportPyShort": "xyttkm",
+    "airportEnName": "Seattle-Tacoma International Airport",
+    "more": 0
+}, {
+    "airportCode": "CGK",
+    "airportName": "雅加达苏加诺-哈达",
+    "countryName": "印度尼西亚",
+    "airportPy": "yajiadasujianuo hada",
+    "airportPyShort": "yjdsjn hd",
+    "airportEnName": "Jakarta",
+    "more": 0
+}, {
+    "airportCode": "ORD",
+    "airportName": "芝加哥奥黑尔",
+    "countryName": "美国",
+    "airportPy": "zhijiageaoheier",
+    "airportPyShort": "zjgahe",
+    "airportEnName": "Chicago",
+    "more": 0
+}]

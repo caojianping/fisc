@@ -1,0 +1,335 @@
+@import "var";
+@import "mixin";
+
+@top: 62px;
+
+//ADS-B类型新样式
+.adsb-type-list {
+	position: absolute;
+	right: 30px;
+	bottom: 167px;
+	background-color: white;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+
+	.adsb-type-item {
+		float: left;
+
+		a {
+			display: block;
+			padding: 0 15px;
+			height: 32px;
+			line-height: 32px;
+			color: #333;
+		}
+
+		&.active > a {
+			color: white;
+			background-color: @fisc-color;
+		}
+	}
+}
+
+//飞行航班：搜索框新样式
+.search-box {
+	position: absolute;
+	top: @top;
+	right: 30px;
+	display: flex;
+	justify-content: center;
+	border-radius: 2px;
+	background-color: white;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	.transition(top, .6s);
+
+	/deep/ .search-type-list.ivu-select {
+		position: relative;
+		width: 120px;
+
+		.ivu-select-selection {
+			height: 51px;
+			border: none;
+
+			.ivu-select-selected-value {
+				padding: 0 20px;
+				height: 51px;
+				line-height: 51px;
+				color: white;
+				background-color: @fisc-color;
+			}
+
+			.ivu-select-arrow {
+				right: 15px;
+				color: white;
+			}
+		}
+
+		.ivu-select-dropdown {
+
+			.ivu-select-item {
+				padding: 0 15px;
+				height: 38px;
+				line-height: 38px;
+
+				&.ivu-select-item-selected {
+					background-color: @fisc-color;
+				}
+			}
+		}
+	}
+
+	.search-value-box {
+		position: relative;
+		height: 51px;
+
+		input {
+			padding: 0 20px 0 30px;
+			width: 200px;
+			height: 51px;
+			font-size: 14px;
+			line-height: 51px;
+			background-color: white;
+			border: none;
+			outline: none;
+		}
+
+		i {
+			position: absolute;
+			right: 20px;
+			top: 12px;
+			font-size: 22px;
+			color: #666;
+			cursor: pointer;
+		}
+	}
+}
+
+//飞行航班：地图类型新样式
+.map-type-box {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	background-color: transparent;
+
+	.map-type-list {
+		width: 152px;
+		height: 105px;
+		cursor: pointer;
+		.transition(width, .6s);
+
+		.map-type-item {
+			position: absolute;
+			top: 0;
+			display: block;
+			width: 132px;
+			height: 105px;
+			border: 1px solid lightgray;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 100% 100%;
+			.transition(right, .6s);
+
+			&:nth-child(1) {
+				right: 20px;
+				z-index: 10000;
+				background-image: url("../images/adsb/map-type-fisc.png");
+			}
+
+			&:nth-child(2) {
+				right: 10px;
+				z-index: 10001;
+				background-image: url("../images/adsb/map-type-street.png");
+			}
+
+			&:nth-child(3) {
+				right: 0;
+				z-index: 10002;
+				background-image: url("../images/adsb/map-type-terrain.png");
+			}
+
+			p {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 26px;
+				color: white;
+				text-align: center;
+				line-height: 26px;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+
+			&.active {
+				border-color: @fisc-color;
+
+				p {
+					background-color: @fisc-color;
+				}
+			}
+		}
+	}
+
+	&.expand {
+		.map-type-list {
+			width: 416px;
+
+			.map-type-item {
+				&:nth-child(1) {
+					right: 284px;
+				}
+
+				&:nth-child(2) {
+					right: 142px;
+				}
+
+				&:nth-child(3) {
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+//地面监控：机场下拉列表样式
+.airport-select {
+	position: absolute;
+	top: @top;
+	right: 290px;
+	width: 180px;
+	color: #333;
+	background-color: white;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+	.transition(top, .6s);
+
+	.airport-name {
+		position: relative;
+		height: 40px;
+		font-size: 16px;
+		line-height: 40px;
+		text-indent: 10px;
+		cursor: pointer;
+
+		span {
+			margin-left: 5px;
+			font-size: 16px;
+		}
+	}
+
+	&:hover > .airport-name:after {
+		position: absolute;
+		top: 18px;
+		right: 20px;
+		content: "";
+		width: 0;
+		height: 0;
+		border-top: 6px solid #333;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+	}
+
+	.airport-dropdown {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		border-top: 1px solid rgb(204, 204, 204);
+
+		li {
+			margin: 2px 0;
+
+			a {
+				display: block;
+				width: 100%;
+				height: 40px;
+				font-size: 14px;
+				line-height: 40px;
+				color: #333;
+				text-indent: 15px;
+				cursor: pointer;
+			}
+
+			&:hover > a,
+			&.active > a {
+				background-color: hsl(214, 93%, 89%);
+				border-left: 2px solid #e5b452;
+			}
+		}
+	}
+}
+
+//地面监控：航班号、飞机编号查询样式
+.airplane-search {
+	position: absolute;
+	top: @top;
+	right: 30px;
+	.transition(top, .6s);
+}
+
+//其他样式
+/deep/ .plane-label {
+	position: absolute;
+	padding: 5px 10px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+
+/deep/ .monitoring-label {
+	position: absolute;
+	padding: 5px 10px;
+	font-weight: bold;
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 5px;
+}
+
+.detail-loading {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding-top: 200px;
+	width: 320px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+	background-color: #f9f9f9;
+
+	img,
+	span {
+		display: inline-block;
+		height: 32px;
+		line-height: 32px;
+		vertical-align: middle;
+	}
+}
+
+//设置持续时间和动画函数
+.slide-fade-enter-active {
+	transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+	transform: translateX(-320px);
+	opacity: 0;
+}
+
+//设置持续时间和动画函数
+.loading-fade-enter-active {
+	transition: all 0.3s ease;
+}
+
+.loading-fade-leave-active {
+	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.loading-fade-enter,
+.loading-fade-leave-to {
+	opacity: 0;
+}

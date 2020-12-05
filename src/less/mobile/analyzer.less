@@ -1,0 +1,133 @@
+@import "../var";
+@import "../mixin";
+
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(97, 149, 243);
+
+	a.back {
+		position: relative;
+		display: block;
+		width: 35px;
+		height: 45px;
+
+		&:before {
+			position: absolute;
+			top: 15px;
+			left: 13px;
+			display: block;
+			width: 14px;
+			height: 14px;
+			content: "";
+			border: 2px solid white;
+			border-top: none;
+			border-right: none;
+			transform: rotate(45deg);
+		}
+	}
+
+	.menu {
+		position: relative;
+		z-index: 1;
+		display: block;
+		flex-grow: 1;
+
+		.menu-selected {
+			display: flex;
+			margin: auto;
+			width: fit-content;
+
+			.menu-selected-value {
+				margin: 0;
+				padding: 0;
+				max-width: 220px;
+				height: 45px;
+				font-size: 17px;
+				line-height: 45px;
+				color: white;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				background-color: transparent;
+				border: none;
+				outline: none;
+
+				@media screen {
+					@media (min-width: 361px) {
+						max-width: none;
+					}
+				}
+			}
+
+			.menu-icon {
+				position: relative;
+				display: inline-block;
+				width: 30px;
+				height: 45px;
+
+				&:after {
+					position: absolute;
+					top: 16px;
+					left: 10px;
+					display: block;
+					width: 10px;
+					height: 10px;
+					content: "";
+					border: 1px solid white;
+					border-right: none;
+					border-bottom: none;
+					transform: rotate(225deg);
+				}
+			}
+		}
+
+		.menu-list {
+			position: absolute;
+			top: 45px;
+			right: 0;
+			left: 0;
+			z-index: 2;
+			display: none;
+			width: 100%;
+			height: auto;
+			background-color: white;
+			box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .2);
+			border-bottom-left-radius: 2px;
+			border-bottom-right-radius: 2px;
+
+			.menu-item {
+				a {
+					display: block;
+					padding: 6px 0;
+					width: 100%;
+					font-size: 14px;
+					line-height: 1.4;
+					color: #333;
+					text-align: center;
+				}
+
+				&.active a {
+					color: rgb(97, 149, 243);
+				}
+			}
+		}
+
+		&.open > .menu-selected > .menu-icon:after {
+			top: 20px;
+			transform: rotate(45deg);
+		}
+
+		&.open > .menu-list {
+			display: block;
+		}
+	}
+
+	i.filter {
+		display: block;
+		width: 35px;
+		height: 45px;
+		background: transparent url("../../images/ellipsis.png") no-repeat center center;
+		background-size: 4.5px 18px;
+	}
+}

@@ -1,0 +1,328 @@
+.panel-height {
+	height: 30px;
+	line-height: 30px;
+}
+
+//地图类型
+.type-list {
+	position: absolute;
+	top: 62px;
+	left: 20px;
+	width: fit-content;
+	height: 61px;
+	background-color: white;
+	box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+
+	.type-item {
+		float: left;
+
+		a {
+			display: block;
+			padding: 0 15px 0 75px;
+			height: 61px;
+			line-height: 61px;
+			color: #666;
+			background-repeat: no-repeat;
+			background-position: 25px center;
+			background-size: 39px 36px;
+		}
+
+		&.active > a {
+			color: #3d86e5;
+		}
+
+		&:nth-child(1) {
+			a {
+				position: relative;
+				background-image: url("../images/weather/traffic.png");
+
+				&:after {
+					position: absolute;
+					top: 15px;
+					right: 0;
+					display: block;
+					width: 1px;
+					height: 30px;
+					background-color: #e6ebf0;
+					content: "";
+				}
+			}
+		}
+
+		&.active:nth-child(1) > a {
+			background-image: url("../images/weather/traffic-active.png");
+		}
+
+		&:nth-child(2) > a {
+			background-image: url("../images/weather/radar.png");
+		}
+
+		&.active:nth-child(2) > a {
+			background-image: url("../images/weather/radar-active.png");
+		}
+	}
+}
+
+//机场搜索框
+.search-box {
+	position: absolute;
+	top: 62px;
+	right: 30px;
+}
+
+//天气详情
+.weather-detail {
+	position: absolute;
+	top: 125px;
+	right: 30px;
+	padding: 10px 20px 40px 20px;
+	width: 350px;
+	font-size: 14px;
+	color: #333;
+	background-color: #f8f8f8;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+
+	&.fixed {
+		bottom: 30px;
+	}
+
+	&.unset {
+		bottom: unset;
+	}
+
+	//选项卡
+	.weather-tabs {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		display: flex;
+
+		li {
+			flex: 1;
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+			padding-left: 70px;
+			height: 60px;
+			font-size: 16px;
+			border-bottom: 1px solid #d9e2eb;
+			background-repeat: no-repeat;
+			background-position: 30px center;
+			background-size: 30px 36px;
+			cursor: pointer;
+
+			&.active {
+				color: #3d86e5;
+				border-bottom: none;
+			}
+
+			&:first-child {
+				background-image: url(../images/weather/airport-info.png);
+				border-right: 1px solid #d9e2eb;
+			}
+
+			&:first-child.active {
+				background-image: url(../images/weather/airport-info-active.png);
+			}
+
+			&:last-child {
+				background-image: url(../images/weather/weather-forecast.png);
+			}
+
+			&:last-child.active {
+				background-image: url(../images/weather/weather-forecast-active.png);
+			}
+		}
+	}
+	.weather-tabs-content {
+		display: block;
+		width: 100%;
+		margin-top: 60px !important;
+	}
+
+	//子选项卡
+	.weather-subtabs {
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0;
+		width: 100%;
+		border: 1px solid #eee;
+		border-radius: 3px;
+
+		li {
+			flex: 1;
+			height: 40px;
+			font-size: 14px;
+			line-height: 40px;
+			text-align: center;
+			background-color: #eeeff1;
+			cursor: pointer;
+
+			&.active {
+				color: #3d86e5;
+				background-color: #fff;
+			}
+		}
+	}
+	.weather-subtabs-content {
+		position: absolute;
+		top: 123px;
+		bottom: 42px;
+		left: 0;
+		right: 0;
+		padding: 0 20px;
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			width: 3px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #aaa;
+			border-radius: 5px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: #ccc;
+		}
+
+		//最新
+		&.lastest {
+			top: 120px;
+			border-bottom: 10px;
+		}
+	}
+
+	//面板
+	.panel {
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px solid #ccc;
+
+		.panel-header {
+			.panel-title,
+			.panel-more,
+			.panel-status {
+				.panel-height;
+			}
+
+			.panel-title {
+				float: left;
+				font-weight: bold;
+			}
+
+			.panel-more,
+			.panel-status {
+				float: right;
+				font-size: 12px;
+				cursor: pointer;
+			}
+
+			.panel-more {
+				color: #429ee5;
+			}
+
+			.panel-status {
+				color: #333;
+			}
+		}
+	}
+
+	//天气列表
+	.weather-list {
+		display: block;
+		background: #f8f8f8;
+
+		.weather-item {
+			float: left;
+			padding: 10px 0;
+			width: 20%;
+			text-align: center;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+
+			time,
+			img,
+			span {
+				display: block;
+				margin: auto;
+			}
+
+			time,
+			span {
+				font-size: 12px;
+				line-height: 24px;
+				color: #4c5361;
+			}
+
+			img {
+				width: 35px;
+				height: 27px;
+			}
+		}
+	}
+
+	//异常机场表格
+	.traffic-table {
+		width: 100%;
+		background-color: #f7f5fb;
+
+		th,
+		td {
+			padding: 2px 0;
+			font-size: 14px;
+			font-weight: normal;
+			color: #667d99;
+			text-align: center;
+			border: 1px solid #dfe5ed;
+		}
+	}
+
+	//图表样式
+	.echarts-box {
+		margin-left: -10px;
+		width: 320px;
+		height: 250px;
+	}
+
+	//报文样式
+	.msg-list {
+		margin-top: 15px;
+		.msg-item {
+			margin-top: 10px;
+		}
+	}
+
+	.msg-text,
+	.msg-time {
+		font-size: 12px;
+		color: #7b8da0;
+	}
+
+	.msg-text {
+		display: inline-block;
+		width: 230px;
+	}
+
+	//滑动缩放
+	.slider {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 30px;
+		background-color: #e0e0e0;
+		background-image: url(../images/jt.png);
+		background-repeat: no-repeat;
+		background-position: center -32px;
+		cursor: pointer;
+
+		&.up {
+			background-position: center 8px;
+		}
+	}
+}

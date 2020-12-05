@@ -1,0 +1,205 @@
+@import "var";
+@import "mixin";
+
+//fisc头部
+.fisc-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9999;
+	display: block;
+	width: 100%;
+	height: 62px;
+	font-size: 16px;
+	background-color: #6196f4;
+	.transition(display, 1s);
+
+	//LOGO样式
+	.logo {
+		float: left;
+		margin: 16px 30px 0 30px;
+		width: 196px;
+		height: 30px;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	//导航栏样式
+	.navs {
+		display: block;
+		float: left;
+
+		.nav-item {
+			position: relative;
+			z-index: 10000;
+			float: left;
+
+			a {
+				display: inline-block;
+				padding: 0 25px;
+				height: 62px;
+				font-size: 16px;
+				line-height: 62px;
+				color: rgba(255, 255, 255, .7);
+				text-decoration: none;
+				cursor: pointer;
+
+				&:hover {
+					color: white;
+				}
+			}
+
+			&.active > a {
+				color: white;
+			}
+
+			.subnavs {
+				position: absolute;
+				top: 62px;
+				z-index: 10001;
+				display: none;
+				background-color: #0d428f;
+				border-radius: 3px;
+				box-shadow: 3px 3px 2px rgba(0, 0, 0, .2);
+				overflow: hidden;
+			}
+
+			&:hover {
+				.subnavs {
+					display: block;
+
+					.subnav-item {
+						a {
+							position: relative;
+							display: block;
+							padding: 0 25px;
+							width: 100%;
+							height: 40px;
+							font-size: 14px;
+							line-height: 40px;
+							color: white;
+							white-space: nowrap;
+
+							&:hover {
+								color: #5897fb;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//设置栏样式
+	.sets {
+		display: block;
+		float: right;
+		margin-right: 30px;
+
+		.set-item {
+			float: left;
+			height: 62px;
+			line-height: 62px;
+
+			&:first-child {
+				.switch {
+					padding: 0 15px;
+					font-size: 16px;
+					color: white;
+				}
+			}
+
+			&:last-child {
+				position: relative;
+
+				&:hover {
+					.dropdown {
+						display: block;
+					}
+				}
+
+				.username {
+					display: inline-block;
+					padding: 0 15px 0 48px;
+					height: 40px;
+					font-size: 16px;
+					line-height: 40px;
+					color: white;
+					vertical-align: middle;
+					background: transparent url("../images/user.png") no-repeat 15px center;
+					background-size: 24px 26px;
+					border-radius: 5px;
+				}
+
+				.dropdown {
+					position: absolute;
+					top: 62px;
+					right: 0;
+					z-index: 10001;
+					display: none;
+					background-color: #0d428f;
+					border-radius: 3px;
+					box-shadow: 3px 3px 2px rgba(0, 0, 0, .2);
+					overflow: hidden;
+
+					li {
+						height: 40px;
+
+						a {
+							display: block;
+							padding: 0 15px;
+							height: 40px;
+							font-size: 15px;
+							line-height: 40px;
+							color: white;
+							white-space: nowrap;
+							cursor: pointer;
+
+							&:hover {
+								color: #5897fb;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//反向风格样式
+	&.inverse {
+		background-color: transparent;
+		border-bottom: 1px solid rgba(252, 254, 255, .17);
+
+		.navs > .nav-item > .subnavs {
+			top: 62px;
+			background-color: white;
+
+			.subnav-item > a {
+				color: #333;
+
+				&:hover {
+					color: white;
+					background-color: #3b85e5;
+				}
+			}
+		}
+
+		.sets > .set-item:last-child > .dropdown {
+			background-color: white;
+
+			li > a {
+				color: #333;
+
+				&:hover {
+					color: white;
+					background-color: #3b85e5;
+				}
+			}
+		}
+	}
+}

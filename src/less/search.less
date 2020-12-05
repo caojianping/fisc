@@ -1,0 +1,141 @@
+@import "mixin";
+
+.fisc-container {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-input {
+	width: 100%;
+	.height50px;
+	text-align: center;
+	text-indent: 10px;
+	.none;
+	border-radius: 3px;
+}
+
+//查询类型
+.search-types {
+	display: flex;
+	margin-right: 15px;
+	padding: 2px;
+	height: 50px;
+	background-color: white;
+	border-radius: 3px;
+
+	li {
+		padding: 0;
+		width: 100px;
+		height: 46px;
+		font-size: 16px;
+		line-height: 46px;
+		text-align: center;
+		border-radius: 3px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: rgba(61, 134, 229, .6);
+			color: white;
+		}
+
+		&.active {
+			background-color: #3d86e5;
+			color: white;
+		}
+	}
+}
+
+//查询值
+.search-value {
+	margin-right: 15px;
+	width: 340px;
+	height: 50px;
+
+	.search-airport {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 50px;
+		background-color: white;
+		border-radius: 3px;
+
+		.airport-swap {
+			width: 44px;
+			height: 50px;
+			background: white url("../images/chage-city.png") no-repeat center center;
+			cursor: pointer;
+		}
+	}
+}
+
+//查询日期
+.search-date {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-right: 15px;
+	width: 300px;
+	.height50px;
+	border-radius: 3px;
+	background-color: white;
+
+	.search-date-label {
+		padding: 0 15px;
+		font-size: 16px;
+		white-space: nowrap;
+	}
+
+	/deep/ .ivu-input {
+		margin: 0;
+		padding: 0;
+		.height50px;
+		text-align: left;
+		text-indent: 10px;
+		.none;
+		box-shadow: none;
+	}
+
+	/deep/ .ivu-select-dropdown {
+		font-size: 14px;
+	}
+
+	/deep/ .ivu-icon {
+		.height50px;
+	}
+}
+
+//查询按钮
+.search-btn {
+	display: block;
+	width: 160px;
+	.height50px;
+	color: white;
+	text-align: center;
+	border-radius: 3px;
+	//background: url(../images/bg-btn.png) repeat-x;
+	background-color: #3d86e5;
+	cursor: pointer;
+}
+
+//航班查询
+@media screen and (max-width: 1200px) {
+	.search-types {
+		margin-right: 10px !important;
+	}
+
+	.search-value {
+		margin-right: 10px !important;
+		width: 250px !important;
+	}
+
+	.search-date {
+		margin-right: 10px !important;
+		width: 230px !important;
+	}
+
+	.search-btn {
+		width: 140px !important;
+	}
+}

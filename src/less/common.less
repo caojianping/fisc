@@ -1,0 +1,523 @@
+@import "var";
+@import "mixin";
+
+//清除浮动
+.clearfix {
+	*zoom: 1;
+	&:after {
+		display: block;
+		height: 0;
+		content: ".";
+		visibility: hidden;
+		overflow: hidden;
+		clear: both;
+	}
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+//fisc布局
+.fisc {
+	@media screen {
+		@media (max-width: 1200px) {
+			min-width: 960px;
+		}
+	}
+}
+
+.fisc-main {
+	position: relative;
+	top: 62px;
+}
+
+.fisc-container {
+	display: block;
+	margin: auto;
+	width: 1200px;
+
+	@media screen {
+		@media (max-width: 1200px) {
+			width: 960px;
+		}
+	}
+}
+
+//fisc表格
+.fisc-table {
+	width: 100%;
+
+	thead > tr > th {
+		height: 52px;
+		font-size: 16px;
+		line-height: 52px;
+		font-weight: normal;
+		color: #626466;
+		text-align: center;
+		background-color: #f2f2f2;
+	}
+
+	tbody {
+		tr {
+			&:hover {
+				background-color: #ebf7ff;
+			}
+
+			&:nth-child(2n) {
+				background-color: #fafafa;
+			}
+
+			&.red {
+				td {
+					color: red;
+				}
+			}
+
+			td {
+				height: 48px;
+				line-height: 48px;
+				text-align: center;
+			}
+		}
+	}
+
+	&.mobile {
+		margin: auto;
+		width: fit-content;
+		min-width: 100%;
+		border-collapse: collapse;
+
+		thead {
+			tr {
+				th {
+					position: relative;
+					padding: 5px 10px;
+					height: auto;
+					font-size: 12px;
+					line-height: 1.2;
+					color: #6196f4;
+					background-color: white;
+
+					&:after {
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						display: block;
+						height: 1px;
+						content: "";
+						background-color: #6196f4;
+					}
+
+					&:first-child {
+						min-width: 65px;
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				&:hover,
+				&:nth-child(2n) {
+					background-color: white;
+				}
+
+				&.red {
+					td {
+						color: red;
+					}
+				}
+
+				td {
+					padding: 10px;
+					height: auto;
+					font-size: 15px;
+					line-height: 1.2;
+					color: #333;
+
+					&:first-child {
+						min-width: 65px;
+					}
+				}
+
+				&:nth-child(2n) td {
+					background-color: #f8f8f8;
+				}
+
+				//定制样式
+				td.right {
+					text-align: right;
+				}
+
+				td.nowrap {
+					white-space: nowrap;
+				}
+
+				td.mwidth65 {
+					min-width: 65px;
+				}
+
+				td.mwidth80 {
+					padding-right: 15px;
+					min-width: 80px;
+				}
+
+				td.mwidth100 {
+					min-width: 110px;
+				}
+			}
+		}
+	}
+
+	&.fisc-table-rank > tbody > tr > td:first-child > span,
+	&.fisc-table-notice > tbody > tr > td:first-child > span {
+		display: inline-block;
+		padding: 0;
+		height: 26px;
+		line-height: 26px;
+		vertical-align: middle;
+	}
+
+	&.fisc-table-rank {
+		tbody > tr > td:first-child > span {
+			width: 48px;
+			color: #6196f4;
+			background: url("../images/sort.png") no-repeat center center;
+			background-size: 100% 100%;
+		}
+
+		tbody > tr > td:first-child > span {
+			width: 48px;
+			height: 26px;
+			line-height: 26px;
+			color: #333;
+			font-style: italic;
+			background: url("../images/sort.png") no-repeat center center;
+			background-size: 100% 100%;
+		}
+
+		&.mobile > tbody > tr > td:first-child > span,
+		&.mobile > tbody > tr:first-child > td > span,
+		&.mobile > tbody > tr:nth-child(2) > td > span,
+		&.mobile > tbody > tr:nth-child(3) > td > span {
+			width: 35.5px;
+			height: 19px;
+			font-size: 12px;
+			line-height: 19px;
+			font-style: italic;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 100% 100%;
+		}
+
+		&.mobile > tbody > tr > td:first-child > span {
+			color: #333;
+			background-image: url("../images/sort.png");
+		}
+
+		&.mobile > tbody > tr:first-child > td > span {
+			color: white;
+			background-image: url("../images/sort/gold-medal.png");
+		}
+
+		&.mobile > tbody > tr:nth-child(2) > td > span {
+			color: white;
+			background-image: url("../images/sort/silver-medal.png");
+		}
+
+		&.mobile > tbody > tr:nth-child(3) > td > span {
+			color: white;
+			background-image: url("../images/sort/bronze-medal.png");
+		}
+	}
+
+	&.fisc-table-notice > tbody > tr > td:first-child > span {
+		width: 26px;
+		color: white;
+		background-color: #ff4e4e;
+		border-radius: 100%;
+	}
+
+	&.mobile.fisc-table-notice > tbody > tr > td:first-child {
+		font-size: 13px;
+	}
+
+	&.mobile.fisc-table-notice > tbody > tr > td:first-child > span {
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+		color: white;
+		font-style: italic;
+		text-align: center;
+		background-color: #ff4e4e;
+		border-radius: 100%;
+	}
+}
+
+//航班状态
+.status-schedule {
+	.status(black);
+}
+
+.status-takeoff {
+	.status(#4c87c2);
+}
+
+.status-arrived {
+	.status(#4ba157);
+}
+
+.status-cancelled {
+	.status(#ff2e2e);
+}
+
+//机场流量选项卡
+.operation-tabs {
+	display: block;
+	margin: 15px 0;
+	width: fit-content;
+	border: 1px solid #d3dbde;
+	border-radius: 3px;
+	overflow: hidden;
+
+	li {
+		float: left;
+		font-size: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		a {
+			display: block;
+			padding: 0 25px;
+			min-width: 120px;
+			height: 42px;
+			font-size: 14px;
+			line-height: 42px;
+			text-align: center;
+			border-right: 1px solid #d3dbde;
+			cursor: pointer;
+		}
+
+		&:last-child {
+			a {
+				border-right: none;
+			}
+		}
+
+		&.active {
+			a {
+				background-color: @fisc-color;
+				color: white;
+			}
+		}
+	}
+}
+
+//机场流量标题
+.operation-title {
+	padding: 30px 0 5px;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+}
+
+//地图
+.map {
+	position: fixed;
+	top: 62px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9998;
+	.transition(top, .6s);
+
+	&.map-fullscreen {
+		.top(0);
+	}
+
+	.map-main {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.gmnoprint {
+	display: block !important;
+	opacity: 0;
+}
+
+button[title="Toggle fullscreen view"] {
+	display: none !important;
+}
+
+//echarts图表
+.echarts {
+	.echarts-icon {
+		display: inline-block;
+		margin-right: 5px;
+		width: 9px;
+		height: 9px;
+		border-radius: 100%;
+	}
+}
+
+//iview样式
+.ivu-message {
+	z-index: 99999;
+}
+
+.ivu-notice {
+	z-index: 99999;
+	width: 300px;
+	margin-right: 10px;
+}
+
+//其它
+.clicked-apt {
+	background: rgba(255, 255, 255, .8);
+	font-size: 15px;
+}
+
+.clicked-apt > .label-codes {
+	width: 150px;
+}
+
+.clicked-apt > .label-codes > span {
+	font-weight: bold;
+	display: block;
+}
+
+.clicked-apt > .label-codes > small {
+	font-size: 10px;
+}
+
+.clicked-apt > .label-status {
+	margin: 10px 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF5432;
+}
+
+ul.weather-apt-ul > li {
+	color: #ff5432;
+	border-left: 2px solid #FF5432;
+	padding-left: 4px;
+	margin-bottom: 3px;
+}
+
+.hover-apt {
+	position: absolute;
+	padding: 5px 10px;
+	background: rgba(255, 255, 255, .8);
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
+}
+
+.hover-apt > span {
+	display: block;
+	font-weight: bold;
+}
+
+.hover-apt > small {
+	font-size: 10px;
+}
+
+.error-input input {
+	border-color: #ED3F14 !important;
+	box-shadow: 0 0 0 2px rgba(241, 150, 122, 0.2) !important;
+}
+
+//---------------------------------移动版本样式----------------------------------------//
+.vux-popup-dialog.vux-popup-top {
+	z-index: 501;
+}
+
+.vux-popup-dialog.vux-popup-bottom { //针对日期控件
+	z-index: 502;
+	height: 100% !important;
+	background-color: white !important;
+}
+
+.vux-popup-dialog .weui-btn.weui-btn_primary {
+	background-color: #6195f3 !important;
+}
+
+.vux-popup-dialog .weui-cells {
+	margin-top: 12px;
+}
+
+.vux-popup-dialog .weui-label,
+.vux-popup-dialog .vux-label {
+	word-break: break-word;
+}
+
+.vux-popup-dialog .weui-input {
+	text-align: right;
+}
+
+.weui-switch:checked, .weui-switch-cp__input:checked ~ .weui-switch-cp__box {
+	border-color: #6195f3 !important;
+	background-color: #6195f3 !important;
+}
+
+.filter-list {
+	display: flex;
+	flex-flow: row wrap;
+	margin-right: 175px;
+
+	.filter-item {
+		margin-right: 15px;
+		margin-bottom: 15px;
+	}
+
+	.ivu-btn.ivu-btn-primary {
+		margin-bottom: 15px;
+	}
+}
+
+.top {
+	position: fixed;
+	right: 15px;
+	bottom: 80px;
+	z-index: 99999;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 0, 0, .6);
+	border-radius: 100%;
+
+	&:before,
+	&:after {
+		position: absolute;
+		z-index: 100000;
+		content: "";
+	}
+
+	&:before {
+		top: 10px;
+		left: 13.5px;
+		width: 13px;
+		height: 13px;
+		border: 3px solid white;
+		border-right: none;
+		border-bottom: none;
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		top: 12px;
+		left: 18px;
+		width: 4px;
+		height: 18px;
+		background-color: white;
+	}
+}

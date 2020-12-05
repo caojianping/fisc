@@ -1,0 +1,12 @@
+一、航司排名接口
+1、请求地址：/airline-chart/index
+2、请求方法：GET
+3、请求参数：
+{
+    startDay: string,//开始日期，默认当月的一号
+    endDay: string,//结束日期，默认当前日期的前一天
+    seeType: int,//1，全国航司；2，前十大航司；默认1
+    cancel: int//1，不包含取消航班；2，包含取消航班；默认1
+}
+4、响应类型：JSON
+5、响应数据：

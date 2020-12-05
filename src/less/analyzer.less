@@ -1,0 +1,109 @@
+.active {
+	color: #3d86e5;
+	background-color: white;
+}
+
+.position {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: block;
+	content: "";
+}
+
+.position-before {
+	left: 0;
+	width: 30px;
+	background-color: #f5f5f5;
+	border-right: 4px solid #3d86e5;
+}
+
+.position-after {
+	right: -1px;
+	z-index: 9999;
+	width: 1px;
+	background-color: white;
+}
+
+//左侧样式
+.analyzer-left {
+	position: fixed;
+	top: 67px;
+	bottom: 0;
+	left: 0;
+	padding-top: 10px;
+	width: 200px;
+	background-color: #f5f5f5;
+	border-right: 1px solid #e6e6e6;
+
+	.menu-list {
+		padding-top: 15px;
+		background-color: #f5f5f5;
+
+		li {
+			a {
+				position: relative;
+				display: block;
+				padding: 15px 10px 15px 49px;
+				width: 100%;
+				font-size: 14px;
+				color: #333;
+				word-wrap: break-word;
+
+				&:hover {
+					background-color: #d4e4fc;
+					.active;
+
+					&:before,
+					&:after {
+						.position;
+					}
+
+					&:before {
+						.position-before;
+					}
+
+					&:after {
+						.position-after;
+					}
+				}
+			}
+
+			&.active {
+				a {
+					.active;
+
+					&:before,
+					&:after {
+						.position;
+					}
+
+					&:before {
+						.position-before;
+					}
+
+					&:after {
+						.position-after;
+					}
+				}
+			}
+		}
+	}
+}
+
+//右侧样式
+.analyzer-main {
+	position: fixed;
+	right: 0;
+	top: 80px;
+	left: 200px;
+	bottom: 20px;
+	padding: 0 20px;
+	overflow-y: auto;
+}
+
+.calcluate-rules {
+	position: absolute;
+	top: 60px;
+	right: 30px;
+}
